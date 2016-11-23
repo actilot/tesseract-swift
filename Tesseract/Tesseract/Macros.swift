@@ -14,12 +14,12 @@
 import UIKit
 
 //  MARK:   Orientation
-var UIOrientationIsPortrait: Bool { get { return UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation) } }
-var UIOrientationIsLadnscape: Bool { get { return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) } }
+public var UIOrientationIsPortrait: Bool { get { return UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation) } }
+public var UIOrientationIsLadnscape: Bool { get { return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) } }
 
 //  MARK:   Device
-var DeviceIsIPad: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pad } }
-var DeviceIsIPhone: Bool { get { return UI_USER_INTERFACE_IDIOM() == .phone } }
+public var DeviceIsIPad: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pad } }
+public var DeviceIsIPhone: Bool { get { return UI_USER_INTERFACE_IDIOM() == .phone } }
 
 /**
  ***  DEVICES  ***
@@ -31,34 +31,33 @@ var DeviceIsIPhone: Bool { get { return UI_USER_INTERFACE_IDIOM() == .phone } }
  */
 
 //  MARK:   Device Height
-var ShortIPhoneHeight: Float { get { return 480.0 } }
-var FourInchIPhoneHeight: Float { get { return 568.0 } }
-var TallIPhoneHeight: Float { get { return 667.0 } }
-var PlusIPhoneHeight: Float { get { return 736.0 } }
+public var ShortIPhoneHeight: Float { get { return 480.0 } }
+public var FourInchIPhoneHeight: Float { get { return 568.0 } }
+public var TallIPhoneHeight: Float { get { return 667.0 } }
+public var PlusIPhoneHeight: Float { get { return 736.0 } }
 
-var DeviceIsShortIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
-var DeviceIsFourInchIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
-var DeviceIsTallIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == TallIPhoneHeight } }
-var DeviceIsPlusIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == PlusIPhoneHeight } }
+public var DeviceIsShortIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
+public var DeviceIsFourInchIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
+public var DeviceIsTallIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == TallIPhoneHeight } }
+public var DeviceIsPlusIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == PlusIPhoneHeight } }
 
-var DeviceIsShortIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
-var DeviceIsFourInchIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
+public var DeviceIsShortIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
+public var DeviceIsFourInchIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
 
 //  MARK:   Screen
-var DeviceIsNonRetina : Bool { get { return UIScreen.main.scale < 2 } }
-var DeviceIsRetina : Bool { get { return UIScreen.main.scale == 2 } }
-var DeviceIsRetinaHD : Bool { get { return UIScreen.main.scale == 3 } }
+public var DeviceIsNonRetina : Bool { get { return UIScreen.main.scale < 2 } }
+public var DeviceIsRetina : Bool { get { return UIScreen.main.scale == 2 } }
+public var DeviceIsRetinaHD : Bool { get { return UIScreen.main.scale == 3 } }
 
 //  MARK:   System Versioning Preprocessor
-func SystemVersionIsEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedSame }
-func SystemVersionIsGreaterThan(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedDescending }
-func SystemVersionIsGreaterThanOrEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedAscending }
-func SystemVersionIsLessThan(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedAscending }
-func SystemVersionIsLessThanOrEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedDescending }
+public func SystemVersionIsEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedSame }
+public func SystemVersionIsGreaterThan(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedDescending }
+public func SystemVersionIsGreaterThanOrEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedAscending }
+public func SystemVersionIsLessThan(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedAscending }
+public func SystemVersionIsLessThanOrEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedDescending }
 
 //  MARK:   Null, Nil, Empty String
-
-func NilIfNull(_ object: Any) -> Any? {
+public func NilIfNull(_ object: Any) -> Any? {
     if (object is NSNull) {
         return nil
     } else {
@@ -66,7 +65,7 @@ func NilIfNull(_ object: Any) -> Any? {
     }
 }
 
-func NullIfNil(_ object: Any?) -> Any? {
+public func NullIfNil(_ object: Any?) -> Any? {
     if (object == nil) {
         return NSNull()
     } else {
@@ -74,7 +73,7 @@ func NullIfNil(_ object: Any?) -> Any? {
     }
 }
 
-func EmptyIfNil(_ object: Any?) -> String? {
+public func EmptyIfNil(_ object: Any?) -> String? {
     if (object == nil) {
         return ""
     } else {
@@ -82,7 +81,7 @@ func EmptyIfNil(_ object: Any?) -> String? {
     }
 }
 
-func EmptyIfNull(_ object: Any?) -> String? {
+public func EmptyIfNull(_ object: Any?) -> String? {
     if (object is NSNull) {
         return ""
     } else {
