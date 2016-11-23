@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		60A15CE61DE52E6A001A9BB4 /* Tesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A15CDC1DE52E6A001A9BB4 /* Tesseract.framework */; };
-		60A15CEB1DE52E6A001A9BB4 /* TesseractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A15CEA1DE52E6A001A9BB4 /* TesseractTests.swift */; };
 		60A15CED1DE52E6A001A9BB4 /* Tesseract.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A15CDF1DE52E6A001A9BB4 /* Tesseract.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60A15CF71DE52E82001A9BB4 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A15CF61DE52E82001A9BB4 /* Macros.swift */; };
 /* End PBXBuildFile section */
@@ -28,8 +27,6 @@
 		60A15CDF1DE52E6A001A9BB4 /* Tesseract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
 		60A15CE01DE52E6A001A9BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A15CE51DE52E6A001A9BB4 /* TesseractTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesseractTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		60A15CEA1DE52E6A001A9BB4 /* TesseractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractTests.swift; sourceTree = "<group>"; };
-		60A15CEC1DE52E6A001A9BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A15CF61DE52E82001A9BB4 /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				60A15CDE1DE52E6A001A9BB4 /* Tesseract */,
-				60A15CE91DE52E6A001A9BB4 /* TesseractTests */,
 				60A15CDD1DE52E6A001A9BB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,15 +74,6 @@
 				60A15CE01DE52E6A001A9BB4 /* Info.plist */,
 			);
 			path = Tesseract;
-			sourceTree = "<group>";
-		};
-		60A15CE91DE52E6A001A9BB4 /* TesseractTests */ = {
-			isa = PBXGroup;
-			children = (
-				60A15CEA1DE52E6A001A9BB4 /* TesseractTests.swift */,
-				60A15CEC1DE52E6A001A9BB4 /* Info.plist */,
-			);
-			path = TesseractTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +197,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A15CEB1DE52E6A001A9BB4 /* TesseractTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +396,7 @@
 				60A15CF21DE52E6A001A9BB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60A15CF31DE52E6A001A9BB4 /* Build configuration list for PBXNativeTarget "TesseractTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +405,7 @@
 				60A15CF51DE52E6A001A9BB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
