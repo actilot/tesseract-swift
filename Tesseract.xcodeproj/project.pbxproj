@@ -10,6 +10,7 @@
 		605E5BCE1DE4946200521E83 /* TesseractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E5BCD1DE4946200521E83 /* TesseractTests.swift */; };
 		605E5BD91DE4946200521E83 /* TesseractUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E5BD81DE4946200521E83 /* TesseractUITests.swift */; };
 		605E5BE71DE4958400521E83 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E5BE61DE4958400521E83 /* Macros.swift */; };
+		60A15CBB1DE52D6E001A9BB4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60A15CBA1DE52D6E001A9BB4 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		605E5BD81DE4946200521E83 /* TesseractUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractUITests.swift; sourceTree = "<group>"; };
 		605E5BDA1DE4946200521E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		605E5BE61DE4958400521E83 /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
+		60A15CBA1DE52D6E001A9BB4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A15CBC1DE52D79001A9BB4 /* TesseractSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractSwift.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 		605E5BB71DE4946100521E83 /* Tesseract */ = {
 			isa = PBXGroup;
 			children = (
+				60A15CBC1DE52D79001A9BB4 /* TesseractSwift.h */,
+				60A15CBA1DE52D6E001A9BB4 /* Info.plist */,
 				605E5BE61DE4958400521E83 /* Macros.swift */,
 			);
 			path = Tesseract;
@@ -222,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A15CBB1DE52D6E001A9BB4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +487,7 @@
 				605E5BDF1DE4946200521E83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		605E5BE01DE4946200521E83 /* Build configuration list for PBXNativeTarget "TesseractTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +496,7 @@
 				605E5BE21DE4946200521E83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		605E5BE31DE4946200521E83 /* Build configuration list for PBXNativeTarget "TesseractUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +505,7 @@
 				605E5BE51DE4946200521E83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
