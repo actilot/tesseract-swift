@@ -8,14 +8,13 @@
 
 /**
     This is a Swift version of Benihime, https://github.com/shiki/ios-benihime/blob/master/Benihime/BMacros.h
-    in which I am one of the contributors
  */
 
 import UIKit
 
 //  MARK:   Orientation
 public var UIOrientationIsPortrait: Bool { get { return UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation) } }
-public var UIOrientationIsLadnscape: Bool { get { return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) } }
+public var UIOrientationIsLandscape: Bool { get { return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) } }
 
 //  MARK:   Device
 public var DeviceIsIPad: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pad } }
@@ -26,8 +25,9 @@ public var DeviceIsIPhone: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pho
  *
  * SHORT  : iPhones (4S, older), iPods (4, older)
  * 4-INCH : iPhones (5, 5S, 5C, SE), iPods (5, 6)
- * TALL   : iPhones (6, 6S, 7)
- * PLUS   : Plus iPhones (6, 6S, 7)
+ * TALL   : iPhones (6, 6S, 7, 8)
+ * PLUS   : Plus iPhones (6, 6S, 7, 8)
+ * X      : iPhone X
  */
 
 //  MARK:   Device Height
@@ -35,11 +35,13 @@ public var ShortIPhoneHeight: Float { get { return 480.0 } }
 public var FourInchIPhoneHeight: Float { get { return 568.0 } }
 public var TallIPhoneHeight: Float { get { return 667.0 } }
 public var PlusIPhoneHeight: Float { get { return 736.0 } }
+public var XiPhoneHeight: Float { get { return 812.0 } }
 
 public var DeviceIsShortIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
 public var DeviceIsFourInchIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
 public var DeviceIsTallIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == TallIPhoneHeight } }
 public var DeviceIsPlusIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == PlusIPhoneHeight } }
+public var DeviceIsXiPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == XiPhoneHeight } }
 
 public var DeviceIsShortIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
 public var DeviceIsFourInchIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }

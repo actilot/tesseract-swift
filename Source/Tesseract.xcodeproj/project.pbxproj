@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		608E0B7B1F6A25730025BCDE /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B7A1F6A25730025BCDE /* MimeType.swift */; };
+		608E0B7D1F6A26030025BCDE /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B7C1F6A26030025BCDE /* Geometry.swift */; };
+		608E0B9A1F6A30270025BCDE /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B911F6A30270025BCDE /* UIViewExtensions.swift */; };
+		608E0B9B1F6A30270025BCDE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B921F6A30270025BCDE /* StringExtensions.swift */; };
+		608E0B9C1F6A30270025BCDE /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B931F6A30270025BCDE /* UIAlertControllerExtensions.swift */; };
+		608E0B9D1F6A30270025BCDE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B941F6A30270025BCDE /* UIColorExtensions.swift */; };
+		608E0B9E1F6A30270025BCDE /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B951F6A30270025BCDE /* UIImageExtensions.swift */; };
+		608E0B9F1F6A30270025BCDE /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B961F6A30270025BCDE /* UITableViewCellExtensions.swift */; };
+		608E0BA01F6A30270025BCDE /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B971F6A30270025BCDE /* UIViewControllerExtensions.swift */; };
+		608E0BA11F6A30270025BCDE /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B981F6A30270025BCDE /* DictionaryExtensions.swift */; };
+		608E0BA21F6A30270025BCDE /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0B991F6A30270025BCDE /* DateExtensions.swift */; };
+		608E0BA41F6A30350025BCDE /* ErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0BA31F6A30350025BCDE /* ErrorExtensions.swift */; };
+		608E0BA61F6A34970025BCDE /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E0BA51F6A34970025BCDE /* NumberExtensions.swift */; };
 		60A15CE61DE52E6A001A9BB4 /* Tesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A15CDC1DE52E6A001A9BB4 /* Tesseract.framework */; };
 		60A15CED1DE52E6A001A9BB4 /* Tesseract.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A15CDF1DE52E6A001A9BB4 /* Tesseract.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60A15CF71DE52E82001A9BB4 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A15CF61DE52E82001A9BB4 /* Macros.swift */; };
@@ -23,6 +36,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		608E0B7A1F6A25730025BCDE /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
+		608E0B7C1F6A26030025BCDE /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		608E0B911F6A30270025BCDE /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		608E0B921F6A30270025BCDE /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		608E0B931F6A30270025BCDE /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		608E0B941F6A30270025BCDE /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		608E0B951F6A30270025BCDE /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		608E0B961F6A30270025BCDE /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		608E0B971F6A30270025BCDE /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		608E0B981F6A30270025BCDE /* DictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
+		608E0B991F6A30270025BCDE /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		608E0BA31F6A30350025BCDE /* ErrorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorExtensions.swift; sourceTree = "<group>"; };
+		608E0BA51F6A34970025BCDE /* NumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		60A15CDC1DE52E6A001A9BB4 /* Tesseract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tesseract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A15CDF1DE52E6A001A9BB4 /* Tesseract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
 		60A15CE01DE52E6A001A9BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +75,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		608E0B901F6A30160025BCDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				608E0B911F6A30270025BCDE /* UIViewExtensions.swift */,
+				608E0B921F6A30270025BCDE /* StringExtensions.swift */,
+				608E0B931F6A30270025BCDE /* UIAlertControllerExtensions.swift */,
+				608E0B941F6A30270025BCDE /* UIColorExtensions.swift */,
+				608E0B951F6A30270025BCDE /* UIImageExtensions.swift */,
+				608E0B961F6A30270025BCDE /* UITableViewCellExtensions.swift */,
+				608E0B971F6A30270025BCDE /* UIViewControllerExtensions.swift */,
+				608E0B981F6A30270025BCDE /* DictionaryExtensions.swift */,
+				608E0B991F6A30270025BCDE /* DateExtensions.swift */,
+				608E0BA31F6A30350025BCDE /* ErrorExtensions.swift */,
+				608E0BA51F6A34970025BCDE /* NumberExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		60A15CD21DE52E6A001A9BB4 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +115,9 @@
 			children = (
 				60A15CDF1DE52E6A001A9BB4 /* Tesseract.h */,
 				60A15CF61DE52E82001A9BB4 /* Macros.swift */,
+				608E0B7A1F6A25730025BCDE /* MimeType.swift */,
+				608E0B7C1F6A26030025BCDE /* Geometry.swift */,
+				608E0B901F6A30160025BCDE /* Extensions */,
 				60A15CE01DE52E6A001A9BB4 /* Info.plist */,
 			);
 			path = Tesseract;
@@ -189,7 +236,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				608E0B7D1F6A26030025BCDE /* Geometry.swift in Sources */,
+				608E0B9D1F6A30270025BCDE /* UIColorExtensions.swift in Sources */,
+				608E0BA11F6A30270025BCDE /* DictionaryExtensions.swift in Sources */,
+				608E0BA01F6A30270025BCDE /* UIViewControllerExtensions.swift in Sources */,
+				608E0B9F1F6A30270025BCDE /* UITableViewCellExtensions.swift in Sources */,
+				608E0BA21F6A30270025BCDE /* DateExtensions.swift in Sources */,
+				608E0BA61F6A34970025BCDE /* NumberExtensions.swift in Sources */,
 				60A15CF71DE52E82001A9BB4 /* Macros.swift in Sources */,
+				608E0B9E1F6A30270025BCDE /* UIImageExtensions.swift in Sources */,
+				608E0BA41F6A30350025BCDE /* ErrorExtensions.swift in Sources */,
+				608E0B9B1F6A30270025BCDE /* StringExtensions.swift in Sources */,
+				608E0B9A1F6A30270025BCDE /* UIViewExtensions.swift in Sources */,
+				608E0B9C1F6A30270025BCDE /* UIAlertControllerExtensions.swift in Sources */,
+				608E0B7B1F6A25730025BCDE /* MimeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
