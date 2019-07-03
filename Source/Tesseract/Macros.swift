@@ -13,8 +13,8 @@
 import UIKit
 
 //  MARK:   Orientation
-public var UIOrientationIsPortrait: Bool { get { return UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation) } }
-public var UIOrientationIsLandscape: Bool { get { return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) } }
+public var UIOrientationIsPortrait: Bool { get { return UIApplication.shared.statusBarOrientation.isPortrait } }
+public var UIOrientationIsLandscape: Bool { get { return UIApplication.shared.statusBarOrientation.isLandscape } }
 
 //  MARK:   Device
 public var DeviceIsIPad: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pad } }

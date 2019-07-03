@@ -20,10 +20,10 @@ public extension UIViewController {
     }
     
     func addKeyboardWillShowNotification(_ action: Selector) {
-        NotificationCenter.default.addObserver(self, selector: action, name: .UIKeyboardWillShow, object: nil)
+      NotificationCenter.default.addObserver(self, selector: action, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     func addKeyboardWilHideNotification(_ action: Selector) {
-        NotificationCenter.default.addObserver(self, selector: action, name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: action, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
 }
