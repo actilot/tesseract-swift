@@ -18,4 +18,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Source/**/*.{swift,h}'
   s.preserve_paths = '*'
+  s.swift_versions = '4.2'
 end
