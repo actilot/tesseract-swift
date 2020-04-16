@@ -34,6 +34,7 @@ public let GENERATION_1_IPHONE_HEIGHT: CGFloat = 480.0
 
 /**
  *  2nd Generation Display Height
+ *
  *  4"    -  iPhones (5, 5s, 5c, SE), iPod Touch Gen (5, 6, 7)
  */
 public let GENERATION_2_IPHONE_HEIGHT: CGFloat = 568.0
