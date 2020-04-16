@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name    = 'TesseractSwift'
-  s.version = '0.2.0'
+  s.version = '1.0.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A collection of independent utility classes for iOS projects in Swift.'
   s.homepage = 'https://github.com/actilot/tesseract-swift'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/actilot/tesseract-swift.git',
     :tag => "#{s.version}"
   }
-  s.platform = :ios, '9.0'
+  s.platform = :ios, '11.0'
   s.requires_arc = true
   s.frameworks = 'UIKit'
 

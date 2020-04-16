@@ -9,17 +9,19 @@
 import Foundation
 
 public extension UIView {
+  
+  var parentStackView: UIStackView? {
+         var parentResponder: UIResponder? = self
+         while parentResponder != nil {
+             parentResponder = parentResponder!.next
+             if let stackView = parentResponder as? UIStackView {
+                 return stackView
+             }
+         }
+         return nil
+   }
     
-    func generateImage() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(self.frame.size, false, UIScreen.main.scale)
-        self.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return image
-    }
-    
-    public var parentViewController: UIViewController? {
+  var parentViewController: UIViewController? {
         var parentResponder: UIResponder? = self
         while parentResponder != nil {
             parentResponder = parentResponder!.next
@@ -29,8 +31,17 @@ public extension UIView {
         }
         return nil
     }
+      
+    func generateImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.frame.size, false, UIScreen.main.scale)
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
     
-    public func hideAnimated(completion: (()->())? = nil) {
+  func hideAnimated(completion: (()->())? = nil) {
         if isHidden {
             return
         }
@@ -42,7 +53,7 @@ public extension UIView {
         }
     }
     
-    public func showAnimated(completion: (()->())? = nil) {
+  func showAnimated(completion: (()->())? = nil) {
         if !isHidden {
             return
         }
@@ -56,17 +67,26 @@ public extension UIView {
         }
     }
     
-    public func changeBackgroundColorAnimated(_ color: UIColor) {
+  func changeBackgroundColorAnimated(_ color: UIColor) {
         UIView.animate(withDuration: 0.3) {
             self.backgroundColor = color
         }
     }
     
-    public func addShadow(_ opacity: CGFloat = 0.4, radius: CGFloat = 7.0) {
+  func addShadow(_ opacity: CGFloat = 0.4, radius: CGFloat = 7.0) {
         self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOpacity = Float(opacity)
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowRadius = radius
     }
+
+  @available(iOS 11.0, *)
+  func setCustomSpacingInStackSuperview(_ spacing: CGFloat, animated: Bool = false) {
+    guard let stack = self.superview as? UIStackView else { return }
+    
+    UIView.animate(withDuration: animated ? 0.3 : 0.0) {
+      stack.setCustomSpacing(spacing, after: self)
+    }
+  }
     
 }

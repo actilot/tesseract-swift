@@ -13,43 +13,170 @@
 import UIKit
 
 //  MARK:   Orientation
-public var UIOrientationIsPortrait: Bool { get { return UIApplication.shared.statusBarOrientation.isPortrait } }
-public var UIOrientationIsLandscape: Bool { get { return UIApplication.shared.statusBarOrientation.isLandscape } }
+
+public var ORIENTATION_IS_PORTRAIT: Bool { get { return UIApplication.shared.statusBarOrientation.isPortrait } }
+public var ORIENTATION_IS_LANDSCAPE: Bool { get { return UIApplication.shared.statusBarOrientation.isLandscape } }
 
 //  MARK:   Device
-public var DeviceIsIPad: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pad } }
-public var DeviceIsIPhone: Bool { get { return UI_USER_INTERFACE_IDIOM() == .phone } }
 
-/**
- ***  DEVICES  ***
- *
- * SHORT  : iPhones (4S, older), iPods (4, older)
- * 4-INCH : iPhones (5, 5S, 5C, SE), iPods (5, 6)
- * TALL   : iPhones (6, 6S, 7, 8)
- * PLUS   : Plus iPhones (6, 6S, 7, 8)
- * X      : iPhone X
- */
+public var DEVICE_IS_IPAD: Bool { get { return UI_USER_INTERFACE_IDIOM() == .pad } }
+public var DEVICE_IS_IPHONE: Bool { get { return UI_USER_INTERFACE_IDIOM() == .phone } }
+
 
 //  MARK:   Device Height
-public var ShortIPhoneHeight: Float { get { return 480.0 } }
-public var FourInchIPhoneHeight: Float { get { return 568.0 } }
-public var TallIPhoneHeight: Float { get { return 667.0 } }
-public var PlusIPhoneHeight: Float { get { return 736.0 } }
-public var XiPhoneHeight: Float { get { return 812.0 } }
 
-public var DeviceIsShortIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
-public var DeviceIsFourInchIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
-public var DeviceIsTallIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == TallIPhoneHeight } }
-public var DeviceIsPlusIPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == PlusIPhoneHeight } }
-public var DeviceIsXiPhone: Bool { get { return DeviceIsIPhone && Float(UIScreen.main.bounds.size.height) == XiPhoneHeight } }
+/**
+ *  1st Generation Display Height
+ *
+ *  3.5"  -  iPhones (4S, older), iPod Touch Gen (4, older)
+ */
+public let GENERATION_1_IPHONE_HEIGHT: CGFloat = 480.0
 
-public var DeviceIsShortIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == ShortIPhoneHeight } }
-public var DeviceIsFourInchIPhoneOrIPod: Bool { get { return Float(UIScreen.main.bounds.size.height) == FourInchIPhoneHeight } }
+/**
+ *  2nd Generation Display Height
+ *  4"    -  iPhones (5, 5s, 5c, SE), iPod Touch Gen (5, 6, 7)
+ */
+public let GENERATION_2_IPHONE_HEIGHT: CGFloat = 568.0
+
+/**
+ *  3rd Generation Display Height
+ *
+ *  4.7"  -  iPhones (6, 6s, 7, 8, SE2)
+ */
+public let GENERATION_3_IPHONE_HEIGHT: CGFloat = 667.0
+
+/**
+ *  3rd Generation Plus Display Height
+ *
+ *  5.5"  -  Plus iPhones (6, 6s, 7, 8)
+ */
+public let GENERATION_3_PLUS_IPHONE_HEIGHT: CGFloat = 736.0
+
+/**
+ *  4th Generation Display Height
+ *
+ *  5.8"  -  iPhones (X, Xs, 11 Pro)
+ */
+public let GENERATION_4_IPHONE_HEIGHT: CGFloat = 812.0
+
+/**
+ *  4th Generation Low-end Display Height
+ *
+ *  6.1"  -  iPhones (Xr, 11)
+ */
+public let GENERATION_4_LOWEND_IPHONE_HEIGHT: CGFloat = 896.0
+
+/**
+ *  4th Generation Max Display Height
+ *
+ *  6.5"  -  Max iPhones (Xs, 11 Pro)
+ */
+public let GENERATION_4_MAX_IPHONE_HEIGHT: CGFloat = 896.0
+
+
+
+/**
+ *  Returns `true` if current device belongs to `1ST GENERATION IPHONE DISPLAY`
+ *
+ *  3.5"  -  iPhones (4S, older)
+ */
+public var DEVICE_IS_GENERATION_1_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_1_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `2ND GENERATION IPHONE DISPLAY`
+ *
+ *  4"    -  iPhones (5, 5s, 5c, SE)
+ */
+public var DEVICE_IS_GENERATION_2_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_2_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `3RD GENERATION IPHONE DISPLAY`
+ *
+ *  4.7"  -  iPhones (6, 6s, 7, 8, SE2)
+ */
+public var DEVICE_IS_GENERATION_3_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_3_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `3RD GENERATION PLUS IPHONE DISPLAY`
+ *
+ *  5.5"  -  Plus iPhones (6, 6s, 7, 8)
+ */
+public var DEVICE_IS_GENERATION_3_PLUS_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_3_PLUS_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `4TH GENERATION IPHONE DISPLAY`
+ *
+ *  5.8"  -  iPhones (X, Xs, 11 Pro)
+ */
+public var DEVICE_IS_GENERATION_4_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT  == GENERATION_4_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `4TH GENERATION LOW-END IPHONE DISPLAY`
+ *
+ *  6.1"  -  iPhones (Xr, 11)
+ */
+public var DEVICE_IS_GENERATION_4_LOWEND_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_4_LOWEND_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `4TH GENERATION MAX IPHONE DISPLAY`
+ *
+ *  6.5"  -  Max iPhones (Xs, 11 Pro)
+ */
+public var DEVICE_IS_GENERATION_4_MAX_IPHONE : Bool { get { return DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_4_MAX_IPHONE_HEIGHT } }
+
+
+/**
+ *  Returns `true` if current device belongs to `1ST GENERATION IPOD TOUCH DISPLAY`
+ *
+ *  3.5"  -  iPod Touch Gen (4, older)
+ */
+public var DEVICE_IS_GENERATION_1_IPOD_TOUCH : Bool { get { return !DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_1_IPHONE_HEIGHT } }
+
+/**
+ *  Returns `true` if current device belongs to `2ND GENERATION IPOD TOUCH DISPLAY`
+ *
+ *  4"    -  iPod Touch Gen (5, 6, 7)
+ */
+public var DEVICE_IS_GENERATION_2_IPOD_TOUCH : Bool { get { return !DEVICE_IS_IPHONE && DEVICE_HEIGHT == GENERATION_2_IPHONE_HEIGHT } }
+
 
 //  MARK:   Screen
-public var DeviceIsNonRetina : Bool { get { return UIScreen.main.scale < 2 } }
-public var DeviceIsRetina : Bool { get { return UIScreen.main.scale == 2 } }
-public var DeviceIsRetinaHD : Bool { get { return UIScreen.main.scale == 3 } }
+
+/**
+ *  Returns the value of `UIScreen.main.bounds.size.height`
+ */
+public let DEVICE_HEIGHT: CGFloat = UIScreen.main.bounds.size.height
+
+/**
+ *  Returns `true` if current device has Screen Scale Factor of `1`
+ *
+ *  **Devices**:
+ *  - iPods 3 and older
+ *  - iPhones 3Gs and older
+ */
+public var DEVICE_IS_NON_RETINA : Bool { get { return UIScreen.main.scale == 1 } }
+
+/**
+ *  Returns `true` if current device has Screen Scale Factor of `2`
+ *
+ *  **Devices**:
+ *  - iPods 4, 5, 6 and 7
+ *  - iPhones 4, 4s
+ *  - iPhones 5, 5s, 5c and SE
+ *  - iPhones 6, 6s, 7, 8 and SE2
+ *  - Plus iPhones 6, 6s, 7 and 8
+ *  - iPhones Xr and 11
+ */
+public var DEVICE_IS_RETINA_HD : Bool { get { return UIScreen.main.scale == 2 } }
+
+/**
+ *  Returns `true` if current device has Screen Scale Factor of `2`
+ *
+ *  **Devices**:
+ *  - iPhones X, Xs and 11 pro
+ *  - Max iPhones Xs and 11 Pro
+ */
+public var DEVICE_IS_SUPER_RETINA_HD : Bool { get { return UIScreen.main.scale == 3 } }
 
 //  MARK:   System Versioning Preprocessor
 public func SystemVersionIsEqualTo(_ version: String) -> Bool { return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedSame }
